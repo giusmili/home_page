@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+html{ /* sélecteur propriété valeur */
+    font-size: 62.5%;  /* 1.000rem root em 10px */
+}
+body{
+    font: 1.6rem "Roboto",sans-serif; /* 16px */
+    margin: 0;
+    color: var(--default-color);
+    background-color: var(--body-color);
+    letter-spacing: .1rem;
+    line-height: 1.6;
+    
+}
+.material-symbols-outlined{
+    vertical-align: middle;
+}
+img{
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+h1,h2,h3,h4,p,ol,ul,figure,dd{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+/* theme */
+:root{
+    --body-color: #2b2a33;
+    --default-color: #ffffff;
+    --primary-blue: #98c4f0;
+    --secondary-blue: #B3C9DAff;
+    --steel-blue: #204862;
+    --bgc-main: #274156ff;
+    --alternate-blue: #E4F2F7ff;
+}
+header{
+    background-color: var(--steel-blue);
+    line-height: 9.0rem;
+}
+header h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 6rem;
+    color: var(--default-color);
+    text-shadow: -.1rem -.1rem 0 #222,
+    .1rem -.1rem 0 #222,
+    -.1rem .1rem 0 #222,
+    .1rem .1rem 0 #222,
+    .4rem .4rem 0 rgba(0,0,0,0.2);
+}
+
+.large-table-primary{
+    max-width: 120rem;
+    margin: 5rem auto 0;
+}
+
+
+main figure{
+    max-width: 40.0rem;
+    margin: 5rem auto;
+}
+main figure img{
+    filter: drop-shadow(0 0 0.75rem rgb(240, 197, 203));
+    animation: spiner 12s infinite alternate-reverse;
+    animation-delay: 1.5s;
+}
+@keyframes spiner {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+main figcaption *{
+    text-align: center;
+    font-weight: 300;
+}
+/* mise en forme du tableau */
+.large-table-primary > table{
+    width: 100%;
+    background-color: var(--default-color);
+    color: var(--body-color);
+}
+.large-table-primary > table caption{
+    color: var(--default-color);
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    padding: .5rem 0;
+    font-size: 2rem;
+}
+
+
+div.large-table-primary > table,
+thead th,
+tbody td,
+tfoot th{
+    border-collapse: collapse;
+    border: solid .1rem var(--bgc-main);
+    padding: .8rem;
+    line-height: 3.5rem;
+}
+
+
+
+.large-table-primary > table thead th, :is(tfoot th){
+    background-color: var(--steel-blue);
+    color: var(--default-color);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.large-table-primary > table thead th:nth-child(1)::before,
+:is(tfoot th:nth-child(1))::before{
+    content: "\2699";
+    vertical-align: - .1rem;
+    margin-right: .5rem;
+    
+}
+.large-table-primary > table thead th:nth-child(1), 
+:is(tfoot th:nth-child(1)){
+    text-align: left;
+    width: 30%;
+}
+/* une couleur sur 2 */
+.large-table-primary > table tbody tr:nth-child(2n + 1){
+    background-color: var(--primary-blue);
+}
+footer p{
+    text-align: center;
+    line-height: 5rem;
+}
