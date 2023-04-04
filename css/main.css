@@ -136,3 +136,8 @@ footer p{
     text-align: center;
     line-height: 5rem;
 }
+footer p .badge{
+    display: inline-block;
+    width:10%;
+
+}
