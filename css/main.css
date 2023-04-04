@@ -65,16 +65,18 @@ main figure{
     margin: 5rem auto;
 }
 main figure img{
-    filter: drop-shadow(0 0 0.75rem rgb(240, 197, 203));
+    
     animation: spiner 12s infinite alternate-reverse;
     animation-delay: 1.5s;
 }
 @keyframes spiner {
     from{
         transform: rotate(0deg);
+        filter: drop-shadow(0 0 0 rgb(0, 0, 0));
     }
     to{
         transform: rotate(360deg);
+        filter: drop-shadow(0 0 0.75rem rgb(240, 197, 203));
     }
 }
 main figcaption *{
